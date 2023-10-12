@@ -12,11 +12,27 @@ Técnicas de segmentación:
 ## Visualización de Resultados
 Para que puedas evaluar fácilmente los resultados de cada técnica, hemos utilizado la biblioteca Matplotlib para mostrarlos en una sola imagen. Cada resultado se presenta en un subplot separado, lo que facilita la comparación y evaluación de las diferentes técnicas utilizadas.
 
-Resultados obtenidos a partir de implementar el Método de Segmentación por Crecimiento de Región con una semilla inicializada de manera manual y otra de manera random
 | [/imagenesREADME/Imagen1.png]|
 
-Resultados obtenidos a partir de implementar el Método de K Medias
-| [/imagenesREADME/Imagen1.png]|
+#### Resultados obtenidos a partir de implementar el Método de Segmentación por Crecimiento de Región con una semilla inicializada de manera manual y otra de manera random:
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="/imagenesREADME/Imagen1.png" alt="Resultado 1" width="400"/>
+    </td>
+  </tr>
+</table>
+
+
+#### Resultados obtenidos a partir de implementar el Método de K Medias:
+<table>
+  <tr>
+    <td align="center">
+      <img src="/imagenesREADME/Imagen1.png" alt="Resultado 1" width="400"/>
+    </td>
+  </tr>
+</table>
 
 ## Cómo Usar el Programa
 Aquí te proporcionamos instrucciones sobre cómo utilizar nuestro programa:
