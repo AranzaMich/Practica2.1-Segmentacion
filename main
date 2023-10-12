@@ -1,3 +1,62 @@
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+import random
+from segmentación.crecimientoRegion import segmentacion_crecimiento_region
 
+
+
+if _name_ == "_main_":
+   
+    imagen_manzana = cv2.imread('utilidades/apple.jpg', cv2.IMREAD_GRAYSCALE)
+    imagen_mri = cv2.imread('utilidades/mri.jpg', cv2.IMREAD_GRAYSCALE)
+
+    datos_manzana = np.array(imagen_manzana)
+    datos_mri = np.array(imagen_mri)
+
+
+
+    #Semilla forma manual
+    semilla_manzana = (100, 100)
+    semilla_mri = (100, 100)
+
+    # Elegir la semilla de forma aleatoria en los límites de la imagen
+    centro_x = random.randint(0, datos_manzana.shape[0] - 1)
+    centro_y = random.randint(0, datos_manzana.shape[1] - 1)
+    semilla1 = (centro_x, centro_y)
+
+    centro_x1 = random.randint(0, datos_mri.shape[0] - 1)
+    centro_y2 = random.randint(0, datos_mri.shape[1] - 1)
+    semilla2 = (centro_x1, centro_y2)
+
+    umbral = 50
+
+    segmentada_manzana = segmentacion_crecimiento_region(imagen_manzana, semilla_manzana, umbral)
+    segmentada_mri = segmentacion_crecimiento_region(imagen_mri, semilla_mri, umbral)
+    segmentada_manzana1 = segmentacion_crecimiento_region(imagen_manzana, semilla1, umbral)
+    segmentada_mri1 = segmentacion_crecimiento_region(imagen_mri, semilla2, umbral)
+
+    # Crear una figura de Matplotlib con dos subplots
+    fig, axs = plt.subplots(1, 4, figsize=(10, 5))
+
+    # Mostrar la imagen segmentada de la manzana en el primer subplot
+    axs[0].imshow(segmentada_manzana, cmap='gray')
+    axs[0].set_title('Semilla manual')
+
+    # Mostrar la imagen segmentada de MRI en el segundo subplot
+    axs[1].imshow(segmentada_mri, cmap='gray')
+    axs[1].set_title(' Semilla manual')
+
+    # Mostrar la imagen segmentada de la manzana en el tercer subplot
+    axs[2].imshow(segmentada_manzana1, cmap='gray')
+    axs[2].set_title('Semilla random')
+
+    # Mostrar la imagen segmentada de MRI en el cuarto subplot
+    axs[3].imshow(segmentada_mri1, cmap='gray')
+    axs[3].set_title('Semilla random')
+
+    # Ajustar el diseño y mostrar la figura
+    plt.tight_layout()
+    plt.show()
 
     
