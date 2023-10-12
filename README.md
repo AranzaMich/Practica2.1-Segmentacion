@@ -12,7 +12,6 @@ Técnicas de segmentación:
 ## Visualización de Resultados
 Para que puedas evaluar fácilmente los resultados de cada técnica, hemos utilizado la biblioteca Matplotlib para mostrarlos en una sola imagen. Cada resultado se presenta en un subplot separado, lo que facilita la comparación y evaluación de las diferentes técnicas utilizadas.
 
-| [/imagenesREADME/Imagen1.png]|
 
 #### Resultados obtenidos a partir de implementar el Método de Segmentación por Crecimiento de Región con una semilla inicializada de manera manual y otra de manera random:
 
