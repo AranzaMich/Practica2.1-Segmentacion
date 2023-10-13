@@ -28,7 +28,7 @@ Para que puedas evaluar fácilmente los resultados de cada técnica, hemos utili
 <table>
   <tr>
     <td align="center">
-      <img src="/imagenesREADME/Imagen1.png" alt="Resultado 1" width="400"/>
+      <img src="/imagenesREADME/Imagen2.jpg" alt="Resultado 1" width="400"/>
     </td>
   </tr>
 </table>
